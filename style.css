@@ -804,3 +804,289 @@ HERO SLIDESHOW
     position: relative;
     z-index: 2;
 }
+/*========================================
+        MOBILE RESPONSIVE DESIGN
+========================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*========================================
+        TABLET
+========================================*/
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 220px;
+    }
+
+    main {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+}
+
+
+/*========================================
+        MOBILE PHONE
+========================================*/
+
+@media (max-width: 768px) {
+
+    /* Stop horizontal scrolling */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* Sidebar becomes normal mobile section */
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: auto;
+
+        left: 0;
+        top: 0;
+
+        padding: 25px 15px;
+
+        overflow: visible;
+    }
+
+
+    /* Profile */
+
+    .profile {
+        text-align: center;
+    }
+
+
+    .profile img {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    /* Sidebar navigation */
+
+    .sidebar ul {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        padding: 0;
+
+        margin: 20px 0 0;
+
+    }
+
+
+    .sidebar ul li {
+        margin: 0;
+    }
+
+
+    .sidebar ul li a {
+        padding: 8px 10px;
+
+        font-size: 14px;
+    }
+
+
+    /* Main content */
+
+    main {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 0;
+
+    }
+
+
+    /* Hero */
+
+    .hero {
+        width: 100%;
+
+        min-height: 650px;
+
+        padding: 80px 25px 50px;
+
+        overflow: hidden;
+
+    }
+
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 100%;
+
+        text-align: center;
+
+        padding: 0;
+
+    }
+
+
+    .hero-content h1 {
+        font-size: 45px;
+
+        line-height: 1.1;
+    }
+
+
+    .hero-content h3 {
+        font-size: 22px;
+    }
+
+
+    .hero-content p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    /* Hero buttons */
+
+    .hero-buttons {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+
+        max-width: 250px;
+
+        text-align: center;
+    }
+
+
+    /* Hero slideshow */
+
+    .hero-slider {
+        width: 100%;
+
+        height: 100%;
+    }
+
+
+    .slide {
+        background-position: center;
+
+        background-size: cover;
+    }
+
+
+    /* Projects */
+
+    .projects-grid {
+        width: 100%;
+    }
+
+
+    .project-card {
+        min-width: 85vw;
+    }
+
+
+    /* Sections */
+
+    section {
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    /* WhatsApp */
+
+    .whatsapp {
+        width: 55px;
+
+        height: 55px;
+
+        right: 18px;
+
+        bottom: 18px;
+
+        font-size: 28px;
+    }
+
+}
+
+
+/*========================================
+        SMALL PHONES
+========================================*/
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 600px;
+
+        padding: 70px 18px 40px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+
+    .hero-content h3 {
+        font-size: 19px;
+    }
+
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+
+    .sidebar ul {
+        gap: 5px;
+    }
+
+
+    .sidebar ul li a {
+        font-size: 13px;
+
+        padding: 7px 8px;
+    }
+
+}
