@@ -7,40 +7,57 @@ const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
 if (projectsGrid && nextBtn && prevBtn) {
+    
+ function getScrollAmount() {
+        const projectCard = projectsGrid.querySelector(".project-card");
+
+        if (!projectCard) return 0;
+
+        const cardWidth = projectCard.offsetWidth;
+        const gap = 30;
+
+        return cardWidth + gap;
+    }
 
     nextBtn.addEventListener("click", () => {
         projectsGrid.scrollBy({
-            left: 420,
+            left: getScrollAmount(),
             behavior: "smooth"
         });
     });
 
     prevBtn.addEventListener("click", () => {
         projectsGrid.scrollBy({
-            left: -420,
+            left: -getScrollAmount(),
             behavior: "smooth"
         });
     });
 
 }
-/*==================================
-HERO SLIDESHOW
-==================================*/
+
+
+//==============================
+// HERO SLIDESHOW
+//==============================
 
 const slides = document.querySelectorAll(".slide");
 
 let currentSlide = 0;
 
-setInterval(() => {
+if (slides.length > 0) {
 
-    slides[currentSlide].classList.remove("active");
+    setInterval(() => {
 
-    currentSlide++;
+        slides[currentSlide].classList.remove("active");
 
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    }
+        currentSlide++;
 
-    slides[currentSlide].classList.add("active");
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
 
-}, 4000);
+        slides[currentSlide].classList.add("active");
+
+    }, 4000);
+
+}
